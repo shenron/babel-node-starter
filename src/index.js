@@ -1,4 +1,6 @@
 // @flow
-import math from "./mathematic";
+import math from './mathematic';
 
-console.log("The answer is: " + math.add(2, 2));
+const msg: string = 'The answer is:';
+
+console.log(`${msg} ${math.add(3, 2)}`);

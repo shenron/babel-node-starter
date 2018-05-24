@@ -1,14 +1,14 @@
-const path = require('path'),
-  webpack = require('webpack'),
-  cleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  target: "node",
+  target: 'node',
+  mode: 'production',
   context: __dirname,
-  entry: ["./src/index.js"],
+  entry: ['./src/index.js'],
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "index.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
   },
   module: {
     rules: [
@@ -16,18 +16,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["env"]
-          }
-        }
-      }
-    ]
+            presets: ['env'],
+          },
+        },
+      },
+    ],
   },
   plugins: [
-    new cleanWebpackPlugin(["dist"]),
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    })
-  ]
+    new CleanWebpackPlugin(['dist']),
+  ],
 };

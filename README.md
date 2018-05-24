@@ -7,7 +7,6 @@ Includes
 - [**Flow**](https://flow.org/) static typechecker for JavaScript
 - [**Babel**](https://babeljs.io/) next generation JavaScript (transpiler for module-system & flow)
 - [**Jest**](https://facebook.github.io/jest/) for testing, mocking and coverage report
-- [**Prettier**](https://prettier.io/) opinionated code formatter
 - [**EsLint**](https://eslint.org/) eslint
 - [**Webpack**](https://webpack.js.org/) module bundler
 - [**Docker**](https://www.docker.com/) create container
