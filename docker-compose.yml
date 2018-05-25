@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  entrypoint:
+    image: shenron/babel-node-started
+    build: .
+    container_name: babel-node-started
+    ports:
+      - "3000:3000"
