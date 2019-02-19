@@ -11,5 +11,19 @@
   },
   "plugins": [
     "flowtype"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        [
+          "test",
+          "./test"
+        ],
+        [
+          "@",
+          "./src"
+        ]
+      ]
+    }
+  }
 }
