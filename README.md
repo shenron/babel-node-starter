@@ -10,6 +10,7 @@ Includes
 - [**EsLint**](https://eslint.org/) eslint
 - [**Webpack**](https://webpack.js.org/) module bundler
 - [**Docker**](https://www.docker.com/) create container
+- [**husky**](https://github.com/typicode/husky) git hooks
 
 ## Scripts
 ```bash

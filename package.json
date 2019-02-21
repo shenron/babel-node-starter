@@ -24,7 +24,10 @@
     "test": "jest tests/**"
   },
   "lint-staged": {
-   "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
@@ -56,6 +59,7 @@
     "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.93.0",
     "flow-typed": "^2.5.1",
+    "husky": "^1.3.1",
     "jest": "^24.1.0",
     "lint-staged": "^8.1.4",
     "nodemon": "^1.18.10",
