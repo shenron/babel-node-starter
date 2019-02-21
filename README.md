@@ -14,10 +14,16 @@ Includes
 ## Scripts
 ```bash
 npm run / yarn
-dev ------------ run server with hot-reload (node-dev)
-nodemon -------- run server with hot-reload (nodemon)
-build ---------- creates bundled webpack build
+dev ------------ run server with hot-reload (babel-watch)
+build ---------- creates bundled default build (babel)
+build:babel ---------- creates bundled babel build
+build:webpack ---------- creates bundled webpack build
 test ----------- runs tests with coverage reports
+flow ------------ run flow-bin
+lint ------------ run eslint
+lint:fix ------------ run eslint and auto fix if possible
+flow:deps ------------ install flow-typed (jest)
+serve ------------ Build and launch the application
 ```
 
 ## Sources & Notes
