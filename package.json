@@ -13,6 +13,7 @@
   "scripts": {
     "flow:deps": "flow-typed install jest@22.x",
     "dev": "nodemon src/index.js --exec babel-node --inspect-brk",
+    "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "test": "jest tests/**",
     "serve": "npm run build && node dist/index.js",
@@ -37,6 +38,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
