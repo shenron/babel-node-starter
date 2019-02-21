@@ -2,38 +2,40 @@
   "name": "babel-node-starter",
   "version": "1.0.0",
   "description": "babel nodejs starter",
-  "author": "Tristan Teufel",
   "homepage": "https://teufel-it.de",
   "repository": {
     "type": "git",
     "url": "https://github.com/shenron/babel-node-starter.git"
   },
   "license": "MIT",
+  "author": "Tristan Teufel",
   "main": "index.js",
   "scripts": {
-    "flow:deps": "flow-typed install jest@22.x",
+    "build": "npm run build:babel",
+    "build:babel": "./node_modules/.bin/babel src -d dist",
+    "build:webpack": "webpack --mode=production",
+    "dev": "babel-watch src/index.js",
     "flow": "flow",
-    "dev": "nodemon src/index.js --exec babel-node --inspect-brk",
+    "flow:deps": "flow-typed install jest@22.x",
     "lint": "eslint src tests",
     "lint:fix": "eslint --fix src tests",
-    "test": "jest tests/**",
     "serve": "npm run build && node dist/index.js",
-    "build:webpack": "webpack --mode=production",
-    "build:babel": "./node_modules/.bin/babel src -d dist",
-    "build": "npm run build:babel"
+    "test": "jest tests/**"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5"
-  },
-  "devDependencies": {
     "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
     "babel-plugin-module-resolver": "^3.2.0",
+    "babel-watch": "^7.0.0",
     "clean-webpack-plugin": "^1.0.1",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
