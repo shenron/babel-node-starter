@@ -20,7 +20,16 @@
     "lint": "eslint src tests",
     "lint:fix": "eslint --fix src tests",
     "serve": "npm run build && node dist/index.js",
+    "precommit": "lint-staged",
     "test": "jest tests/**"
+  },
+  "lint-staged": {
+   "*.js": ["eslint --fix", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   },
   "dependencies": {},
   "devDependencies": {
@@ -48,6 +57,7 @@
     "flow-bin": "^0.93.0",
     "flow-typed": "^2.5.1",
     "jest": "^24.1.0",
+    "lint-staged": "^8.1.4",
     "nodemon": "^1.18.10",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
