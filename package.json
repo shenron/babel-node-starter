@@ -12,9 +12,10 @@
   "main": "index.js",
   "scripts": {
     "flow:deps": "flow-typed install jest@22.x",
+    "flow": "flow",
     "dev": "nodemon src/index.js --exec babel-node --inspect-brk",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint --fix src tests",
     "test": "jest tests/**",
     "serve": "npm run build && node dist/index.js",
     "build:webpack": "webpack --mode=production",
