@@ -8,7 +8,7 @@ COPY package.json $UHOME/tmp/package.json
 COPY yarn.lock $UHOME/tmp/yarn.lock
 
 RUN cd $UHOME/tmp/ && \
-  yarn install --frozen-lockfile --no-cache --production && \
+  yarn install --frozen-lockfile --no-cache && \
   mv node_modules/ $UHOME/app/node_modules && \
   mv package.json $UHOME/app/package.json && \
   mv yarn.lock $UHOME/app/yarn.lock
