@@ -1,5 +1,6 @@
 // @flow
 
+import './sourceMapSupport';
 import math from './mathematic';
 
 const msg: string = 'The answer is:';

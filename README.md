@@ -41,6 +41,8 @@ https://github.com/flowtype/flow-typed
 https://facebook.github.io/jest/docs/en/getting-started.html#using-babel  
 ##### Babel:
 https://babeljs.io/docs/setup/#installation
+##### Source map support:
+https://github.com/evanw/node-source-map-support#readme
 
 ## License
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
