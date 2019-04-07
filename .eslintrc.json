@@ -10,6 +10,11 @@
     "jest": true,
     "node": true
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
   "plugins": [
     "flowtype",
     "flowtype-errors"
