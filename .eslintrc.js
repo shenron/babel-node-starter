@@ -14,7 +14,8 @@ module.exports = {
   },
   parserOptions: {
     ecmaFeatures: {
-      legacyDecorators: true
+      // toggle to `false` to use `@decaorator` between `export default` and `class` keywords
+      legacyDecorators: false
     }
   },
   plugins: [
