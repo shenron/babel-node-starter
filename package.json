@@ -17,11 +17,18 @@
     "dev": "babel-watch src/index.js",
     "flow": "flow",
     "flow:deps": "flow-typed install jest@22.x",
+    "flow:detect": "flow-detect src",
     "lint": "eslint src tests",
     "lint:fix": "eslint --fix src tests",
-    "serve": "npm run build && node dist/index.js",
     "precommit": "lint-staged",
+    "prepublishOnly": "npm run flow:detect && npm run lint && npm run test && npm run build",
+    "serve": "npm run build && node dist/index.js",
     "test": "jest tests/**"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   },
   "lint-staged": {
     "*.js": [
@@ -29,26 +36,21 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit"
-    }
-  },
   "dependencies": {
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/node": "^7.7.4",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
     "@babel/preset-flow": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-watch": "^7.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.7.2",
@@ -59,12 +61,13 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "flow-bin": "^0.113.0",
+    "flow-bin": "^0.114.0",
+    "flow-detect": "^1.0.1",
     "flow-typed": "^2.6.2",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10"
   }
 }
